@@ -1,0 +1,18 @@
+version: 2
+
+
+sources:
+    - name: raw_demo
+      schema: raw_data_circle
+      description: raw data schema 
+      tables:
+        - name: sales
+          identifier: raw_cc_sales
+          description: raw data for sales
+
+        - name: stock
+          identifier: raw_cc_stock
+          description: raw data for sales
+          
+
+          
