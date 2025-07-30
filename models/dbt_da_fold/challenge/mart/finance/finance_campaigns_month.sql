@@ -17,6 +17,6 @@
      SUM(ship_cost) AS ship_cost,
  FROM {{ ref('int_campaigns_day') }} i 
  FULL OUTER JOIN {{ ref('finance_days') }} m
-    on i.date_date = m.date   
+    on i.date_date = m.date_date   
  GROUP BY datemonth
  ORDER BY datemonth desc

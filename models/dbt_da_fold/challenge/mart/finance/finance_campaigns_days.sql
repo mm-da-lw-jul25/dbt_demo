@@ -17,6 +17,6 @@ SELECT
     ship_cost
 FROM {{ ref('int_campaigns_day') }} i
 FULL OUTER JOIN {{ ref('finance_days') }} m
-    on i.date_date = m.date   
+    on i.date_date = m.date_date   
 where operational_margin - ads_cost is null 
 ORDER BY date_date DESC
