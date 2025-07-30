@@ -13,5 +13,6 @@ sources:
         - name: stock
           identifier: raw_cc_stock
           description: raw data for sales
+          
 
           

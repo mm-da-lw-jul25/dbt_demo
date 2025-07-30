@@ -12,11 +12,6 @@ renamed as (
         model,
         model_name,
         color,
-        color_name,
-        size,
-        new,
-        forecast_stock,
-        stock,
         price
 
     from source
