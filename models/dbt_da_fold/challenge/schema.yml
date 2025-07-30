@@ -67,8 +67,62 @@ sources:
         identifier: raw_gz_facebook
 
 
-models:
-  - name: stg_raw_chlg_sales
-    description: raw sales data
+models: 
+      - name: stg_raw_chlg__sales
+        description: raw sales data
+        
 
-  - name: stg_raw_chlg_product
+      - name: stg_raw_chlg__ship
+        description: raw ship data 
+      
+      - name: stg_raw_chlg__product
+        description: raw product data
+
+
+
+      - name: int_sales_margin
+        description: data join raw tables sales and product
+
+      - name: int_orders_margin
+        description: data sales margin by order and date
+
+      - name: int_orders_operational
+        description: data orders operational 
+      
+
+      - name: test_query
+        description: data test 
+      
+      - name: supply_chain_data
+        description: data for supply chain
+
+      - name: stg_raw_chlg__facebook
+        description: facebook data
+
+      - name: stg_raw_chlg__criteo
+        description: criteo data 
+
+      - name: stg_raw_chlg__bing
+        description: bing data
+
+      - name: stg_raw_chlg__adwords
+        description: adwords data
+
+      - name: int_campaigns
+        description: data from all campaigns
+        columns:
+          - name: paid_source
+            tests:
+              - not_null
+          - name: campaign_name
+            tests:
+              - not_null
+
+        # This will run but achieve nothing.
+        tests:
+          - unique:
+              column_name: "(campaign_key || '-' || date_date)"
+
+
+      - name: int_campaigns_day
+        description: data dailyfrom all campaigns
